@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star</title>
+    <style>
+        .solarsys {
+            width: 800px;
+            height: 800px;
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            background-color: black;
+            /* transform: scale(1) */
+        }
+        .sun {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background-color: rgb(248,107,35);
+            position: absolute;
+            left: 357px;
+            top: 357px;
+        }
+        .mercury {
+            /* 大小 形状 颜色 位置  */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(166,138,56);
+            position: absolute;
+            left: 337.5px;
+            top: 395px;
+            transform-origin: 62.5px 5px;
+            animation: rotate 15s infinite linear;
+        }
+        @keyframes rotate {
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="solarsys">
+    <!-- https://c.runoob.com/codedemo/5528 -->
+        <div class="sun"></div>
+        <div class="mercury"></div>
+   </div> 
+</body>
+</html>

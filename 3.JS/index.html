@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖和节流</title>
+    <style>
+        div {
+            width: 150px;
+            height:100px;
+            line-height:100px;
+            text-align:center; 
+            font-size:80px;
+            color: #fff;
+            background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">0</div>
+ 
+<script>
+    let num = 1;
+    let content = document.getElementById('content');
+ 
+    function count() {
+        content.innerHTML = num++;
+    };
+
+    function debounce(func, wait) {
+        let timer;
+        return function() {
+            let context = this; // 注意 this 指向
+            let args = arguments; // arguments中存着e
+                
+            if (timer) clearTimeout(timer);
+        
+            timer = setTimeout(() => {
+                func.apply(this, args)
+            }, wait)
+        }
+    }
+    content.onmousemove = debounce(count,1000);
+</script>
+</body>
+</html>

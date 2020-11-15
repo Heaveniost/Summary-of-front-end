@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>images</title>
+    <style>
+        body {
+            color: #333;
+            background-color: #ccc;
+            margin: 1em 10%;
+        }
+
+        h1 {
+            color: #333;
+            background-color: transparent;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            float: left;
+            padding: 1em;
+            list-style: none;
+        }
+
+        a {
+            color: #c60;
+            background-color: transparent;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        img {
+            display: block;
+            clear: both;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Snapsshots</h1>
+    <ul id="imagegallery">
+        <li><a href="images/01.jpg" title="i love u" >cat</a></li>
+        <li><a href="images/02.jpg" title="i hate u" >dog</a></li>
+        <li><a href="images/03.jpg" title="give me a kiss" >pig</a></li>
+        <li><a href="images/04.jpg" title="kill me heal me" >tiger</a></li>
+    </ul>
+    <img id="placeholder" src="images/05.jpg" alt="a pretty girl">
+    <p id="description">Choose an image.</p>
+
+    <script>
+        window.onload = prepareGallery;
+        function prepareGallery() {
+            if (!document.getElementsByTagName) return false;
+            if (!document.getElementById) return false;
+            if (!document.getElementById('imagegallery')) return false;
+            var gallery = document.getElementById('imagegallery')
+            var links = gallery.getElementsByTagName('a');
+            for (var i = 0; i < links.length; i++) {
+                // alert('ok')
+                links[i].onclick = function () {
+                    return !showPic(this);
+                }
+            }
+        }
+
+        function showPic(pic) {
+            if (!document.getElementById('placeholder')) return false;
+            // var source = pic.getAttribute('href');
+            var source = pic.href;
+            var placeholder = document.getElementById('placeholder');
+            if (placeholder.nodeName != 'IMG') return false;
+            placeholder.src = source;
+            if (document.getElementById('description')) {
+                var text = pic.getAttribute('title');
+                var desc = document.getElementById('description');
+                desc.firstChild.nodeValue = text;
+            }
+            return true;
+            // alert(desc.nodeType)/-[-[//
+        }
+    </script>
+</body>
+
+</html>

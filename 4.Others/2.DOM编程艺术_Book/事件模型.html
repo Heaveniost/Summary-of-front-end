@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件模型</title>
+</head>
+<body>
+    <!-- 段落标签仅响应一次鼠标经过行为 -->
+    <p id="p1">事件注册</p>
+    <script>
+        var p1 = document.getElementById('p1');
+        var f1 = function() {
+            p1.style.background = 'blue';
+        }
+        var f2 = function() {
+            p1.style.background = 'red'
+            if(p1.detachEvent) {
+                p1.detachEvent('onmouseover', f1);
+                p1.detachEvent('onmouseout', f2);
+            } else {
+                p1.removeEventListener('mouseover', f1);
+                p1.removeEventListener('mouseout', f2);
+            }
+        }
+        if(p1.attachEvent) {
+            p1.attachEvent('onmouseover', f1);
+            p1.attachEvent('onmouseout', f2);
+        } else {
+            p1.addEventListener('mouseover', f1);
+            p1.addEventListener('mouseout', f2);
+        }
+    </script>
+</body>
+</html>

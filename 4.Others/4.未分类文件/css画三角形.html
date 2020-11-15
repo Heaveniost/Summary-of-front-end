@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #triangle-up {
+            position: relative;
+            width: 0;
+            height: 0;
+            border-top: 50px solid transparent;
+            border-right: 50px solid red;
+            border-bottom: 50px solid transparent;
+        }
+        #triangle-up::after{
+            position: absolute;
+            content: "";
+            top: -50px;
+            left: 2px;
+            border-top: 50px solid transparent;
+            border-right: 50px solid white;
+            border-bottom: 50px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- 来源： https://www.html.cn/qa/css3/15005.html -->
+    <!-- 基础： 画出三角形 理解边框的组成 -->
+    <!-- 进阶： 三角形带边框 箭头 -->
+    <div id="triangle-up"></div>
+</body>
+</html>

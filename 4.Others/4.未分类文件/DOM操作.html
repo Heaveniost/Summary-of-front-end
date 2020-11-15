@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM操作</title>
+</head>
+<body>
+    <div id="main">
+        <p id="del">今天星期三</p>
+        <ul id="myList">
+            <li class="first">和好了</li>
+            <li>真开心</li>
+            <li>希望这次能好好的</li>
+        </ul>
+        <p id="hate">我不喜欢黑夜</p>
+        <p id="replace">我等下就被替换了</p>
+    </div>
+
+    <script>
+        // 增删改查 修改元素的样式 内容
+
+        // 查询 修改元素内容
+        var x=document.getElementsByClassName("first")[0]
+        // console.log(x)
+        x.innerHTML = "天气凉了，记得加衣"
+         // 修改元素属性
+        var ele = document.getElementById("hate")
+        ele.style.color = "blue"
+        // 增加元素 先创建元素节点 然后追加到已有的元素上
+        var para = document.createElement("p")
+        var node = document.createTextNode("能否对我好一点")
+        para.appendChild(node)
+        // 添加在了元素的最后一个子元素上 
+        var element = document.getElementById("main")
+        element.appendChild(para)  
+        // 添加在某个元素前面 insertBefore需要两个参数
+        var para1 = document.createElement("li")
+        var node1 = document.createTextNode("Do u know how I love u")
+        para1.append(node1)
+        var el = document.getElementById("myList")
+        el.insertBefore(para1, el.childNodes[1])
+        // 删除元素 找到待删除的元素和它的父元素
+        var child = document.getElementById("del")
+        // var parent = document.getElementById("main")
+        // parent.removeChild(child)
+        child.parentNode.removeChild(child)
+        // 替换元素
+        var ch = document.getElementById("replace")
+        element.replaceChild(child, ch)
+        // 输出节点内容
+        var y = document.getElementsByTagName("li")
+        for (i=0; i<y.length; i++){
+            console.log(y[i].innerHTML)
+        }
+    </script>
+</body>
+</html>

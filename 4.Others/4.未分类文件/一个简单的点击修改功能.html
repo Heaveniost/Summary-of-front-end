@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var change = function() {
+            var x = document.getElementById("myDiv")
+            x.innerHTML = '<h1>我现在不一样了</h1><p>我被修改了</p>'
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <div id="myDiv">我真的是个废物</div>
+        <button onclick="change()">修改内容</button>
+    </div>
+
+</body>
+</html>

@@ -12,25 +12,28 @@ const fs = require("fs");
 
 //使用 promise 实现
 const p = new Promise((resolve, reject) => {
-    fs.readFile("./resources/为学.md", (err, data) => {
+    fs.readFile("./resource/为学.md", (err, data) => {
+        // if (err) reject(err);
         resolve(data);
     });
 });
 
 p.then(value => {
     return new Promise((resolve, reject) => {
-        fs.readFile("./resources/插秧诗.md", (err, data) => {
+        fs.readFile("./resource/插秧诗.md", (err, data) => {
             resolve([value, data]);
         });
     });
-}).then(value => {
+},err=>console.log(err + 'qwe')).then(value => {
+    console.log(value, typeof value, 'shiwo')
     return new Promise((resolve, reject) => {
         fs.readFile("./resources/观书有感.md", (err, data) => {
             //压入
-            value.push(data);
+            if(value)  value.push(data);
+            console.log(data.toString())
             resolve(value);
         });
     })
 }).then(value => {
-    console.log(value.join('\r\n'));
-});
+    if(value) console.log(value.join('\r\n'));
+}).catch(err => console.log(err));

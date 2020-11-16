@@ -19,8 +19,13 @@ const p = new Promise(function(resolve, reject){
     });
 });
 
+// p.then(function(value){
+//     console.log(value.toString());
+// }, function(reason){
+//     console.log("读取失败!!");
+// });
 p.then(function(value){
     console.log(value.toString());
-}, function(reason){
-    console.log("读取失败!!");
 });
+
+console.log('over')

@@ -1,1 +1,5 @@
-**/node_modules
+dist/
+node_modules/
+.project
+unpackage/
+.DS_Store

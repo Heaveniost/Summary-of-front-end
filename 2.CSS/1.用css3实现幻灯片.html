@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幻灯片</title>
+    <style>
+        .ani {
+            width: 480px;
+            height: 320px;
+            margin: 50px auto;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+            background-size: cover;
+            background-position: center;
+            animation: loops 20s infinite;
+            -webkit-animation: loops 20s infinite;
+        }
+
+        @keyframes loops {
+            0% {
+                background: url('./imgs/01.jpg') repeat-x;
+            }
+
+            25% {
+                background: url('./imgs/02.jpg') repeat-x;
+            }
+
+            50% {
+                background: url('./imgs/03.jpg') repeat-x;
+            }
+
+            75% {
+                background: url('./imgs/04.jpg') repeat-x;
+            }
+
+            100% {
+                background: url('./imgs/05.jpg') repeat-x;
+            }
+        }
+
+        @-webkit-keyframes loops {
+            0% {
+                background: url('./imgs/01.jpg') repeat-x;
+            }
+
+            25% {
+                background: url('./imgs/02.jpg') repeat-x;
+            }
+
+            50% {
+                background: url('./imgs/03.jpg') repeat-x;
+            }
+
+            75% {
+                background: url('./imgs/04.jpg') repeat-x;
+            }
+
+            100% {
+                background: url('./imgs/05.jpg') repeat-x;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ani"></div>
+</body>
+
+</html>

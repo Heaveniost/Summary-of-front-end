@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ani {
+            width: 480px;
+            height: 320px;
+            margin: 50px auto;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+            /* background-size: cover; */
+            /* background-position: center; */
+            animation: loops 20s;
+            /* -webkit-animation: loops 20s; */
+            background: url('./imgs/01.jpg') no-repeat;
+        }
+
+        @keyframes loops {
+            from {
+                background: url('./imgs/01.jpg') no-repeat;
+            }
+
+            to {
+                background: url('./imgs/02.jpg') no-repeat;
+            }
+        }
+
+        @-webkit-keyframes loops {
+            from {
+                background: url('imgs/01.png') no-repeat;
+            }
+
+            to {
+                background: url('imgs/05.png') no-repeat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ani"></div>
+</body>
+
+</html>

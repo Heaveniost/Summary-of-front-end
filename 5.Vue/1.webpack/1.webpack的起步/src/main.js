@@ -10,3 +10,8 @@ console.log(name)
 
 //依赖css文件
 require('./css/normal.css')
+
+//导入less文件
+require('./css/special.less')
+
+document.writeln('<h2>我是Hurst</h2>')

@@ -17,6 +17,7 @@ require('./css/special.less')
 
 document.writeln('<h2>我是Hurst</h2>')
 
+
 // 5.使用Vue进行开发
 import Vue from 'vue'
 import App from './vue/App.vue'
@@ -28,3 +29,5 @@ new Vue({
         App
     }
 })
+
+document.write('<h2>webpack is finished.</h2><h2>内心很开心。</h2>')

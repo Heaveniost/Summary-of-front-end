@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumbotron</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .header, .marketing, .footer {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        .header {
+            padding-bottom: 20px;
+            border-bottom: 1px solid black;
+            /* border-bottom: 1px solid #e5e5e5; */
+        }
+        .header h3 {
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 40px;
+        }
+        .footer {
+            padding-top: 19px;
+            color: #777;
+            border-top: 1px solid #e5e5e5;
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 730px;
+            }
+        }
+        .container-narrow > hr {
+            margin: 30px 0;
+        }
+        /* 定义jubotron的样式 */
+        .jumbotron {
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .jumbotron .btn {
+            padding-top: 14px 24px;
+            font-size: 21px;
+        }
+        /* 定义正文样式 */
+        .marketing {
+            margin: 40px 0;
+        }
+        .marketing p+h4 {
+            margin-top: 28px; 
+        } 
+        /* 响应式设计 */
+
+        
+        @media screen and (min-width: 768px) {
+            /* 移除padding */
+            .header, .marketing, .footer {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            .header {
+                margin-bottom: 30px;
+            }
+            .jumbotron {
+                border-bottom: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header clear-fix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">About</a></li>
+                    <li role="presentation"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Project name</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1>Hello,world!</h1>
+            <p class="lead">This is a template for a simple marketing or informational website. It includes a large callout called a
+                jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+                unique.</p>
+            <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        </div>
+
+
+    <div class="row marketing">
+        <div class="col-lg-6">
+            <h4>Subfeading</h2>
+            <p>lalDonec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh
+            </p>
+            <h4>Subfeading</h2>
+            <p>lalDonec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh
+            </p>
+            <h4>Subfeading</h2>
+            <p>lalDonec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <h4>Subfeading</h2>
+            <p>lalDonec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh
+            </p>
+            <h4>Subfeading</h2>
+            <p>lalDonec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh
+            </p>
+            <h4>Subfeading</h2>
+            <p>lalDonec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2016 Company, Inc</p>
+    </footer>
+    </div>
+
+
+</body>
+
+</html>

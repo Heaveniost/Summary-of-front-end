@@ -1,0 +1,6 @@
+origin: https://www.bilibili.com/video/BV1pt411H7D6?from=search&seid=5516800217794802302
+
+01. 入口函数怎么理解    
+    window.onload = function() {}
+
+    不可以添加多个入口函数，后面的会覆盖前面的

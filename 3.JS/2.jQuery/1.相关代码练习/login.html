@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        .login-choice {
+            display: flex;
+        }
+
+        .login-yzm {
+            margin-left: 15px;
+        }
+
+        .form-group span {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="survey-form">
+        <div class="login-choice">
+            <button class="login-pwd">密码登录</button>
+            <button class="login-yzm">验证码登录</button>
+        </div>
+        <div class="first">
+            <div class="form-group">
+                <label id="name-label" for="name">用户名：</label>
+                <input type="text" placeholder="Enter your name" minlength="4" maxlength="20" required>                
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">密码：</label>
+                <input type="email" placeholder="Enter your password" minlength="8" maxlength="20" required>
+            </div>
+            <div class="form-group">
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="验证码">
+                <img src="" alt="captcha">
+            </div>
+        </div>
+        <div class="last">
+
+            <div class="form-group">
+                <label for="email">手机号：</label>
+                <input type="email" placeholder="Enter your phone number" minlength="11" maxlength="11" required>
+                <span>点击发送验证码</span>
+            </div>
+            <div class="form-group">
+                <label id="name-label" for="name">验证码：</label>
+                <input type="text" placeholder="Enter captcha" minlength="6" maxlength="6" required>
+            </div>
+        </div>
+
+        <button type="submit">登录</button>
+    </form>
+    <script>
+        $(function () {
+            $('.last').hide();
+            $('.login-pwd').click(function () {
+                $('.first').show();
+                $('.last').hide();
+            });
+
+            $('.login-yzm').click(function () {
+                $('.first').hide();
+                $('.last').show();
+            })
+        })
+    </script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</body>
+
+</html>

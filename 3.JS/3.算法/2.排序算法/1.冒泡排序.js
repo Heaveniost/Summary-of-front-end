@@ -14,6 +14,6 @@ function sort(arr) {
     }
 }
 
-var arr = [12,32,1,3,5,6,7,98,4,3,44]
+var arr = [3,5,7,9,2,4,6,1,8]
 sort(arr) // 注意sort没有返回值
 console.log(arr)
